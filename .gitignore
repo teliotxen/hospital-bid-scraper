@@ -1,6 +1,4 @@
 /.DS_Store
 *.pyc
-app/__pycache__
-app/__pycache__
-.gitignore
-/.gitignore
+**/__pycache__/
+.venv/

@@ -1,25 +1,25 @@
 ﻿병원명,URL,타입 설명,table_tag,div_tag,지역
 강북삼성병원,https://main.kbsmc.co.kr/main/contents.do?a_num=41458193,"table class 없는 table, div tag",,table_blist,서울특별시
 건국대학교병원,https://www.kuh.ac.kr/intro/bid/list.do,"a tag에 리스트 표시 ",,boardBox,서울특별시
-경희의료원,https://www.khmc.or.kr/kr/introduction-tender/list.do,"table class 없는 table, div tag",,mCSB_container mCS_x_hidden mCS_no_scrollbar_x,서울특별시
-고려대학교안암병원,https://anam.kumc.or.kr/kr/NEWS_TENDER/list.do,"table class 없는 table, div tag",,list_type02 center mt40,서울특별시
+경희의료원,https://www.khmc.or.kr/kr/introduction-tender/list.do,KHMC JSON API,,khmc_api:15,서울특별시
+고려대학교안암병원,https://anam.kumc.or.kr/kr/NEWS_TENDER/list.do,KUMC JSON API,,kumc_api:NEWS_TENDER,서울특별시
 서울대학교병원,https://www.snuh.org/board/B004/list.do,"table class 없는 table, div tag",,boardTypeTbl,서울특별시
-서울성모병원,https://www.cmcseoul.or.kr/page/board/tender?p=1&s=12&q=%7B%7D,"li tag에 리스트 표시 ",,itemes(ul tag),서울특별시
+서울성모병원,https://www.cmcseoul.or.kr/page/board/tender?p=1&s=12&q=%7B%7D,CMC JSON API,,cmc_api:1482,서울특별시
 연세대학교세브란스병원(총무),https://severance.healthcare/news/news/bid-notice.do,div tag에 리스트 표시,,bbs-list,서울특별시
 연세대학교세브란스병원(구매),https://severance.healthcare/news/bid-notice2.do,div tag에 리스트 표시,,bbs-list,서울특별시
 중앙대학교병원,https://ch.cauhs.or.kr/home/board/46_List.do,table class,board_list_table,,서울특별시
 한양대학교병원,https://seoul.hyumc.com/seoul/notice/noticeTender.do,오류 계시판 로드 안됨,,,서울특별시
 이화여대부속목동병원,https://mokdong.eumc.ac.kr/intro/bid/list.do,"table class 없는 table, div tag",,table table-bg01,서울특별시
 서울아산병원,https://www.amc.seoul.kr/asan/information/tender/tenderList.do,table class,tableLayout,,서울특별시
-"고려대구로병원 ",https://guro.kumc.or.kr/kr/NEWS_TENDER/list.do,"table class 없는 table, div tag",,list_type02 center mt40,서울특별시
-고려대안산병원,https://ansan.kumc.or.kr/kr/NEWS_TENDER/list.do,"table class 없는 table, div tag",,list_type02 center mt40,경기남부
+고려대구로병원,https://guro.kumc.or.kr/kr/NEWS_TENDER/list.do,KUMC JSON API,,kumc_api:NEWS_TENDER,서울특별시
+고려대안산병원,https://ansan.kumc.or.kr/kr/NEWS_TENDER/list.do,KUMC JSON API,,kumc_api:NEWS_TENDER,경기남부
 분당서울대병원,https://www.snubh.org/intro/news/bid/list.do,table class,table_type3 bh_tbl_noti,,경기남부
 아주대병원,https://hosp.ajoumc.or.kr/board/commBoardBidList.do,table class,tb tb_cr tb_st03,,경기남부
 단국대병원,https://www.dkuh.co.kr/board5/bbs/board?bo_table=01_03_04,"table class 없는 table, div tag",,tbl_head01 tbl_wrap,경기남부
 가천대길병원,https://www.gilhospital.com/web/www/-152,"table class 없는 table, div tag",,table-col notice,경기북부/인천
 인하대병원,https://www.inha.com/page/about/bid,table class,table table-type1,,경기북부/인천
 일산백병원,https://www.paik.ac.kr/ilsan/user/bbs/BMSR00064/list.do?menuNo=900138,table class,table-list,,경기북부/인천
-부천성모병원,https://www.cmcbucheon.or.kr/page/board/tender?p=1&s=12&q=%7B%7D,li class 리스트,,itemes,경기북부/인천
+부천성모병원,https://www.cmcbucheon.or.kr/page/board/tender?p=1&s=12&q=%7B%7D,CMC JSON API,,cmc_api:1601,경기북부/인천
 순천향대부천병원,https://www.schmc.ac.kr/bucheon/ntslrMcchrg/bid_list.do?key=16126,table class,_list,,경기북부/인천
 부산대병원,https://www.pnuh.or.kr/pnuh/hospital/forum/bidding-information.do,"table class 없는 table, div tag",,lineList_tb typeSort,부산/울산/경남
 양산부산대병원,https://www.pnuyh.or.kr/pnuyh/hospital/bidding-information.do,"table class 없는 table, div tag",,bn-list-common,부산/울산/경남
