@@ -14,8 +14,10 @@ CSV 설정값에 따라 다섯 가지 스크래핑 패턴을 사용합니다.
 
 from __future__ import annotations
 
+import asyncio
 import re
 import ssl
+import urllib.request
 from datetime import datetime
 from typing import List, Optional
 from urllib.parse import urljoin, urlparse
@@ -349,7 +351,17 @@ async def _fetch_cmc_api(
     """CMC 계열 병원 JSON API에서 입찰 목록을 가져옵니다."""
     board_no = _cmc_board_no(hospital)
     base = hospital.url.split("/page/")[0]  # https://www.cmcseoul.or.kr
-    api_url = f"{base}/api/article/{board_no}?p=1&s=12"
+    
+    import urllib.parse
+    parsed = urllib.parse.urlparse(hospital.url)
+    qs = urllib.parse.parse_qs(parsed.query)
+    q_vals = qs.get("q")
+    
+    if q_vals and q_vals[0]:
+        api_url = f"{base}/api/article/{board_no}?p=1&s=12&q={urllib.parse.quote(q_vals[0])}"
+    else:
+        api_url = f"{base}/api/article/{board_no}?p=1&s=12"
+        
     view_prefix = f"{base}/page/board/tender/"
 
     try:
@@ -570,10 +582,22 @@ async def _fetch_kumc_api(
     )
 
 
+def _urllib_fetch_raw_sync(url: str, headers: dict) -> bytes:
+    req = urllib.request.Request(url, headers=headers)
+    ctx = _make_insecure_ssl_context()
+    with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
+        return resp.read()
+
+
 async def _fetch_raw(client: httpx.AsyncClient, url: str) -> bytes:
-    response = await client.get(url, headers=BROWSER_HEADERS, follow_redirects=True)
-    response.raise_for_status()
-    return response.content
+    try:
+        response = await client.get(url, headers=BROWSER_HEADERS, follow_redirects=True)
+        response.raise_for_status()
+        return response.content
+    except httpx.RemoteProtocolError as e:
+        if "illegal header line" in str(e):
+            return await asyncio.to_thread(_urllib_fetch_raw_sync, url, BROWSER_HEADERS)
+        raise
 
 
 async def _fetch_raw_post(client: httpx.AsyncClient, url: str, data: dict) -> bytes:

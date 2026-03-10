@@ -1,4 +1,4 @@
-﻿병원명,URL,타입 설명,table_tag,div_tag,지역
+병원명,URL,타입 설명,table_tag,div_tag,지역
 강북삼성병원,https://main.kbsmc.co.kr/main/contents.do?a_num=41458193,"table class 없는 table, div tag",,table_blist,서울특별시
 건국대학교병원,https://www.kuh.ac.kr/intro/bid/list.do,"a tag에 리스트 표시 ",,boardBox,서울특별시
 경희의료원,https://www.khmc.or.kr/kr/introduction-tender/list.do,KHMC JSON API,,khmc_api:15,서울특별시
@@ -36,8 +36,13 @@
 건양대병원,https://www.kyuh.ac.kr/prog/bid/list.do,table class,datatable,,충청권
 충북대병원,https://www.cbnuh.or.kr/bbs/BBSMSTR_000000000356/list.do,table class,board_list table table-default,,충청권
 순천향대천안병원,https://www.schmc.ac.kr/cheonan/ntslrMcchrg/bid_list.do?key=16130,table class,board_list,,충청권
-단국대병원,https://www.dkuh.co.kr/board5/bbs/board?bo_table=01_03_04,"table class 없는 table, div tag",,tbl_head01 tbl_wrap,충청권
 전남대병원,https://cnuh.com/board/B0012.cs?m=66,table class,boardList captionNone,,전라권
 화순전남대병원,https://www.cnuhh.com/board/B0028.cs?m=67,table class,boardList captionNone,,전라권
 조선대병원,https://hosp.chosun.ac.kr/bbs/?b_id=bidding&site=hospital&mn=223,"table class 없는 table, div tag",,boardList,전라권
 연세대원주세브란스기독병원,https://www.ywmc.or.kr/web/www/notice_tender,"table class 없는 table, div tag",,tbl_list03,강원
+가톨릭대학교성빈센트병원,https://www.cmcvincent.or.kr/page/board/tender?p=1&s=12&q=%7B%22vincentRecruitYn%22%3A%22Y%22%7D,CMC JSON API,,cmc_api:1301,경기남부
+가톨릭대학교인천성모병원,https://www.cmcism.or.kr/center/bidding_list,table class,border_list mgt30,,충청권
+대구가톨릭대학교병원,https://www.dcmc.co.kr/content/06customer/10_05.asp,"table class 없는 table, div tag",,table_blist,대구/경북
+원광대학병원,https://www.wkuh.org/main/contents.do?a_num=38512780,"table class 없는 table, div tag",,table_blist,전라권
+전북대학병원, https://www.jbuh.co.kr/prog/bidPbanc/main/sub04_03/list.do, table class, table table-default,,전라권
+한림대학교성심병원, https://hallym.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_news&screen=ptm200&search_text=%C0%D4%C2%FB%B0%F8%B0%ED&search_type=t, table class, boardlistnew,,경기남부
